@@ -7,7 +7,7 @@
             <div  v-for="empleado in empleados.list" class="container"> 
                 <div class="row"> 
                      <div class="col-6">
-                         Nombre
+                         Nombre fsfsdafgdssdfa
                      </div>
                     <div class="col-6">
                         {{empleado.Nombres}}

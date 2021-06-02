@@ -1,4 +1,4 @@
-﻿function ajax(direccion, tipo, datos, btn, callback) {
+﻿function ajax(direccion, datos, btn, callback) {
     if (btn !== null) {
         if (btn.length > 0) {
             btn.attr('autocomplete', 'off');
@@ -8,7 +8,7 @@
     $.ajax({
         url: direccion,
         type: 'post',
-        dataType: tipo,
+        dataType: 'html',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(datos),
         complete: function () {
@@ -39,7 +39,7 @@
 
 function ajax2(url, params, btn, callback) {
     if (params == null) params = { id: Math.random };
-    ajax(url, "html", params, btn, function (response) {
+    ajax(url, params, btn, function (response) {
 
         response = jsonResponse(response);
         if (response.hasOwnProperty("error")) {
